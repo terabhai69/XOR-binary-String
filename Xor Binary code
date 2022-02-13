@@ -1,0 +1,27 @@
+for l in range(int(input())):
+    zero = 0
+    one = 0
+    k = 1
+    N = int(input())
+    input_no = input()
+    for i in range(len(input_no)):
+        if input_no[i] == '0':
+            zero = zero + 1
+        else:
+            one = one + 1
+    if one == zero:
+        print("YES")
+        k = 0
+    zero = zero % 2
+    one = one % 2
+    if k != 0:
+        if one == 1 and zero == 1:
+            print("NO")
+        elif one == 1 and zero == 0:
+            print("YES")
+        elif one == 0 and zero == 1:
+            print("YES")
+        elif one == 0 or zero == 0:
+            print("YES")
+        else:
+            print("NO")
