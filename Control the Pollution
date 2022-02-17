@@ -1,0 +1,18 @@
+for t in range(int(input())):
+    N, X, Y = map(int, input().split())
+    a, b, c = 0, 0, 0
+    n1, n2, n3 = N, N, N
+    while n1 > 0:
+        n1 -= 100
+        a += 1
+    while n2 > 0:
+        n2 -= 4
+        b += 1
+    while n3 > 0:
+        if n3 >= 100:
+            n3 -= 100
+            c += X
+        else:
+            n3 -= 4
+            c += Y
+    print(min(a*X,b*Y,c))
