@@ -4,8 +4,8 @@ for t in range(int(input())):
     input_no.insert(0,X)
     sume = 0
     max = 0
-    for i in range(N):
+    for i in range(len(input_no)):
         sume += input_no[i]
-        if max <= sume:
+        if sume > max:
             max = sume
     print(max)
