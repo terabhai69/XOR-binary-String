@@ -1,0 +1,11 @@
+input_no = list(map(int, input().split()))
+min = min1 = max(input_no)
+for i in range(len(input_no)):
+    if input_no[i] < min:
+        min = input_no[i]
+print("First smaller no. is ", min)
+for i in range(len(input_no)):
+    if input_no[i] != min:
+        if input_no[i] < min1:
+            min1 = input_no[i]
+print("Second smaller no. is ", min1)
