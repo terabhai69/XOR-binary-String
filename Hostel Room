@@ -1,0 +1,11 @@
+for t in range(int(input())):
+    N, X = map(int, input().split())
+    input_no = list(map(int, input().split()))
+    input_no.insert(0,X)
+    sume = 0
+    max = 0
+    for i in range(N):
+        sume += input_no[i]
+        if max <= sume:
+            max = sume
+    print(max)
