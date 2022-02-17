@@ -1,0 +1,12 @@
+#input no.s and get pairs and triply element of target no.
+
+
+input_no = list(map(int, input().split()))
+N = int(input("Enter No :- "))
+for i in range(len(input_no)):
+    for j in range(i+1,len(input_no)):
+        if input_no[i]+input_no[j] == N:
+            print(input_no[i] , input_no[j])
+        for k in range(i+2,len(input_no)):
+            if input_no[i] + input_no[j] + input_no[k] == N:
+                print(input_no[i] , input_no[j], input_no[k])
