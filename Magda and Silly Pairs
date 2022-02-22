@@ -1,0 +1,22 @@
+#Total Run time = 0.75 sec for N <= 100
+
+for q in range(int(input())):
+    A, B, sume = [], [], 0
+    N = int(input())
+    input_no1 = list(map(int, input().split()))
+    input_no2 = list(map(int, input().split()))
+    for i in range(N):
+        if input_no1[i] % 2 == 0:
+            A.append(input_no1[i])
+    for i in range(N):
+        if input_no1[i] % 2 == 1:
+            A.append(input_no1[i])
+    for i in range(N):
+         if input_no2[i] % 2 == 0:
+            B.append(input_no2[i])
+    for i in range(N):
+        if input_no2[i] % 2 == 1:
+            B.append(input_no2[i])
+    for i in range(N):
+        sume += int((A[i] + B[i]) / 2)
+    print(sume)
